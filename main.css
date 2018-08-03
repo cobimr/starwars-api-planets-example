@@ -1,0 +1,111 @@
+body {
+  background: black;
+}
+
+p, h1, h2 {
+  color: rgba(255, 255, 255, 0.83);
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#start {
+  transition: all ease-in 0.5s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#start:hover {
+  color: yellow;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Planets */
+.planet {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 0 0 60px -20px rgba(255, 255, 255, 0.72),
+  -14px -15px 40px -10px rgba(255, 238, 191, 0.23);
+}
+
+.planet .mask {
+  width:300px;
+  height:300px;
+  position: absolute;
+  box-shadow:inset -10px -10px 40px #251303,
+  inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+  border-radius:50%;
+}
+
+.planet .clouds {
+  background: url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: translateBackground 60s infinite linear;
+  opacity: 0.7;
+}
+
+.planet .wrap {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  animation: rotatePlanet 150s infinite linear;
+}
+
+@keyframes translateBackground {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -600px;
+  }
+}
+
+@keyframes rotatePlanet {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+#p1 {background: rgb(74, 114, 165)}
+
+#p2 {background: rgb(45, 124, 41)}
+
+#p3 {background: rgb(210, 235, 227)}
+
+#p4 {background: rgb(108, 133, 73)}
+
+#p5 {background: rgb(230, 171, 95)}
+
+#p6 {background: rgb(31, 79, 40)}
+
+#p7 {background: rgb(7, 151, 96)}
+
+#p8 {background: rgb(38, 4, 63)}
+
+#p9 {background: rgb(59, 85, 97)}
+
+#p10 {background: rgb(223, 92, 5);}
+
+/* Queries */
+@media (max-width: 768px) {
+  p, h2  {
+    text-align: center
+  }
+}
